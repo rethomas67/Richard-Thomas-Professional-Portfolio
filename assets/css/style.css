@@ -1,13 +1,20 @@
+/*set the global attributes*/
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  border: 0;
 }
-
+/*set the parent up to use the flex-box to render by row on smaller devices*/
 body {
+  display: flex;
+  flex-direction: column;
   background-color: #d9dcd6;
   margin: 0;
 }
+
+/*set up the fonts,padding, color, and background color for the header*/
 header {
   padding: 15px 0px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -15,31 +22,28 @@ header {
   background-color: black;
   color: aqua;
 }
+/*setup the fonts,location,color,background color for the h1 text*/
 header h1 {
-  display: inline-block;
-  font-size: 48px;
+  float: left;
+
+  font-size: 20px;
   background-color: aqua;
   color: black;
   margin-right: 5px;
 }
-.photo {
-  position: absolute;
-  display: inline-block;
-  height: 65px;
-  width: 105px;
 
-  margin: auto;
-}
-img {
-  position: fixed;
+/*set the dimensions of the image*/
+header img {
   height: 60px;
   width: 100px;
   margin: 0;
 }
+/*set attributes for the menu items-- float it to the right*/
 header nav {
-  /*display: flex;
-  text-align: center;
-  position: relative;*/
+  display: flex;
+  justify-content: flex-end;
+
+  /*flex: 1 1 auto;*/
   padding-top: 25px;
   margin-right: 20px;
   float: right;
@@ -50,17 +54,76 @@ header nav {
 
 header nav ul {
   list-style-type: none;
-  margin: 0;
+  /*margin: 0;*/
   padding: 0;
 }
 header nav ul li {
   display: inline-block;
   margin-left: 15px;
   top: 0;
+  text-align: right;
 }
 
 a {
   color: aqua;
   text-decoration-thickness: 2px;
   text-underline-offset: 5px;
+}
+
+/*media queries to handle the reponsiveness of the header elements*/
+
+@media screen and (max-width: 660px) {
+  /* stack the menu items and change the image size */
+  header {
+    display: flex;
+
+    width: 100%;
+    margin: 0;
+  }
+  header h1 {
+    height: 100%;
+  }
+  header nav {
+    width: 100%;
+
+    flex-direction: column;
+
+    padding: 0px 5px;
+    background-color: black;
+    margin: 0;
+  }
+
+  header nav ul li {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 285px) {
+  /* stack the menu items and change the image size */
+  header {
+    display: flex;
+
+    width: 100%;
+    margin: 0;
+  }
+  header h1 {
+    height: 100%;
+  }
+  header nav {
+    width: 30%;
+
+    flex-direction: column;
+
+    padding: 0px 5px;
+    background-color: black;
+    margin: 0;
+  }
+
+  header nav ul li {
+    font-size: 15px;
+    text-align: left;
+    width: 60%;
+    padding: 0;
+    margin: 0;
+  }
 }
