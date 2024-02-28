@@ -180,6 +180,9 @@ section_subtitle {
   background-size: cover;
   background-position: center;
   justify-content: stretch;
+  border-top: 2px solid var(--default);
+  border-right: 2px solid var(--default);
+  border-bottom: 2px solid var(--default);
   gap: 20px;
 
   flex: 1 1 90%;
@@ -215,6 +218,9 @@ section_subtitle {
   background-image: url("../images/horiseon.jpg");
   background-size: cover;
   background-position: center;
+  border-top: 2px solid var(--default);
+  border-right: 2px solid var(--default);
+  border-bottom: 2px solid var(--default);
   justify-content: space-between;
   gap: 20px;
   align-content: space-between;
@@ -252,6 +258,7 @@ section_subtitle {
   background-image: url("../images/horiseon.jpg");
   background-size: cover;
   background-position: center;
+  border: 2px solid var(--default);
 
   gap: 20px;
   flex: 1 1 40%;
@@ -288,6 +295,9 @@ section_subtitle {
   background-size: cover;
   background-position: center;
   justify-content: space-between;
+  border-top: 2px solid var(--default);
+  border-right: 2px solid var(--default);
+  border-bottom: 2px solid var(--default);
   gap: 20px;
   align-content: space-between;
 
@@ -324,6 +334,7 @@ section_subtitle {
   background-image: url("../images/horiseon.jpg");
   background-size: cover;
   background-position: center;
+  border: 2px solid var(--default);
 
   gap: 20px;
   flex: 1 1 40%;
@@ -363,27 +374,86 @@ section_subtitle {
   width: 100%;
   margin: 0;
   padding: 0;
+
   /*font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;*/
 }
-.contact_detail .aside_right {
+
+.contact_detail {
+  padding: 0 0 0 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.contact_detail .position {
+  padding: 0 0 0 0;
   display: flex;
   border-left: 3px solid var(--sectionBackground);
+  margin: 5px 0 0 0;
 
-  margin: 0;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  flex: 1 1 90%;
+}
 
+.position .phone {
+  height: 25px;
+  margin: 5px 0 0 0;
+  display: flex;
+  flex: 1 1 1;
+  flex-flow: column wrap;
+  color: var(var(--headerBlack));
+  font-weight: bold;
+
+  border-bottom: 3px solid var(--headerBlack);
+  border-left: 3px solid var(--sectionBackground);
+}
+.position .email {
+  height: 25px;
+  margin: 5px 0 0 0;
+  display: flex;
+  flex: 1 1 1;
+  flex-flow: column wrap;
+  color: var(var(--headerBlack));
+  font-weight: bold;
+
+  border-bottom: 3px solid var(--headerBlack);
+}
+/*
+.work_detail {
   padding: 0 0 0 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.work_detail .first_project {
+  padding: 0 0 0 0;
+  display: flex;
+  border-left: 3px solid var(--sectionBackground);
+  margin: 0 0 0 0;
+  height: 200px;
+  width: 100%;
+  position: relative;
+  flex-flow: column wrap;
+
   clear: both;
 
-  flex-basis: 90%;
+  background-image: url("../images/horiseon.jpg");
+  background-size: cover;
+  background-position: center;
+  justify-content: stretch;
+  border-top: 2px solid var(--default);
+  border-right: 2px solid var(--default);
+  border-bottom: 2px solid var(--default);
+  gap: 20px;
 
-  /*font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;*/
-  background-color: var(--documentColor);
-}
-.contact_detail .aside_right p {
-  padding-top: 5px;
-  padding-left: 20px;
-  padding-bottom: 20px;
-}
+  flex: 1 1 90%;
+
+  /*font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: var(--document);
+}*/
 /*media queries to handle the reponsiveness of the header elements*/
 
 @media screen and (max-width: 660px) {
