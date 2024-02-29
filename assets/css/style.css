@@ -157,6 +157,7 @@ section_subtitle {
   padding-left: 20px;
   padding-bottom: 20px;
 }
+
 .work_detail {
   padding: 0 0 0 0;
   margin: 0;
@@ -202,22 +203,32 @@ section_subtitle {
   left: 0px;
 }
 
+.work_detail img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.work_detail img:hover {
+  opacity: 0.3;
+}
+
 .work_detail .second_project {
   padding: 0 0 0 0;
   margin: 5px 0 0 0;
   display: flex;
   border-left: 3px solid var(--sectionBackground);
   margin-right: 5px;
-  height: 200px;
-  width: 100%;
+  /*height: 200px;
+  width: 100%;*/
   position: relative;
   flex-flow: column wrap;
 
   clear: both;
 
-  background-image: url("../images/horiseon.jpg");
+  /*background-image: url("../images/horiseon.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center;*/
   border-top: 2px solid var(--default);
   border-right: 2px solid var(--default);
   border-bottom: 2px solid var(--default);
@@ -248,15 +259,15 @@ section_subtitle {
   display: flex;
 
   margin-right: 0;
-  height: 200px;
-  width: 100%;
+  /*height: 200px;
+  width: 100%;*/
   position: relative;
   flex-flow: column wrap;
 
   clear: both;
 
-  background-image: url("../images/horiseon.jpg");
-  background-size: cover;
+  /*background-image: url("../images/horiseon.jpg");
+  //background-size: cover;*/
   background-position: center;
   border: 2px solid var(--default);
 
@@ -284,16 +295,16 @@ section_subtitle {
   display: flex;
   border-left: 3px solid var(--sectionBackground);
   margin-right: 5px;
-  height: 200px;
-  width: 100%;
+  /* height: 200px;
+  width: 100%;*/
   position: relative;
   flex-flow: column wrap;
 
   clear: both;
 
-  background-image: url("../images/horiseon.jpg");
+  /* background-image: url("../images/horiseon.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center;*/
   justify-content: space-between;
   border-top: 2px solid var(--default);
   border-right: 2px solid var(--default);
@@ -324,16 +335,16 @@ section_subtitle {
   display: flex;
 
   margin-right: 0;
-  height: 200px;
-  width: 100%;
+  /*height: 200px;
+  width: 100%;*/
   position: relative;
   flex-flow: column wrap;
 
   clear: both;
 
-  background-image: url("../images/horiseon.jpg");
+  /*background-image: url("../images/horiseon.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center;*/
   border: 2px solid var(--default);
 
   gap: 20px;
@@ -407,7 +418,6 @@ section_subtitle {
   font-weight: bold;
 
   border-bottom: 3px solid var(--headerBlack);
-  border-left: 3px solid var(--sectionBackground);
 }
 .position .email {
   height: 25px;
@@ -420,41 +430,18 @@ section_subtitle {
 
   border-bottom: 3px solid var(--headerBlack);
 }
-/*
-.work_detail {
-  padding: 0 0 0 0;
-  margin: 0;
+
+.position .linkedn {
+  height: 25px;
+  margin: 5px 0 0 0;
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.work_detail .first_project {
-  padding: 0 0 0 0;
-  display: flex;
-  border-left: 3px solid var(--sectionBackground);
-  margin: 0 0 0 0;
-  height: 200px;
-  width: 100%;
-  position: relative;
+  flex: 1 1 1;
   flex-flow: column wrap;
+  color: var(var(--headerBlack));
+  font-weight: bold;
 
-  clear: both;
-
-  background-image: url("../images/horiseon.jpg");
-  background-size: cover;
-  background-position: center;
-  justify-content: stretch;
-  border-top: 2px solid var(--default);
-  border-right: 2px solid var(--default);
-  border-bottom: 2px solid var(--default);
-  gap: 20px;
-
-  flex: 1 1 90%;
-
-  /*font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  background-color: var(--document);
-}*/
-/*media queries to handle the reponsiveness of the header elements*/
+  border-bottom: 3px solid var(--headerBlack);
+}
 
 @media screen and (max-width: 660px) {
   /* stack the menu items and change the image size */
