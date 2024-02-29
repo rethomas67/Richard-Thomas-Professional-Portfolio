@@ -34,14 +34,12 @@ main {
 /*set up the fonts,padding, color, and background color for the header*/
 header {
   padding: 15px 0px;
-
   background-color: var(--headerBlack);
   color: var(--default);
 }
 /*setup the fonts,location,color,background color for the h1 text*/
 header h1 {
   float: left;
-
   font-size: 20px;
   background-color: var(--textBackground);
   color: var(--headerBlack);
@@ -58,19 +56,15 @@ header img {
 header nav {
   display: flex;
   justify-content: flex-end;
-
-  /*flex: 1 1 auto;*/
   padding-top: 25px;
   margin-right: 20px;
   float: right;
-  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;*/
   font-size: 20px;
   width: auto;
 }
-
+/*set attributes for the nav bar menu*/
 header nav ul {
   list-style-type: none;
-  /*margin: 0;*/
   padding: 0;
 }
 header nav ul li {
@@ -80,6 +74,7 @@ header nav ul li {
   text-align: right;
 }
 
+/*attributes for the menu link*/
 a {
   color: var(--default);
   text-decoration-thickness: 2px;
@@ -106,6 +101,7 @@ section_subtitle {
 .section_subtitle {
   position: relative;
 }
+/*align the subtitle*/
 .section_subtitle figure h2 {
   display: flex;
   text-align: right;
@@ -119,45 +115,69 @@ section_subtitle {
   font-size: 30px;
 }
 
+h3 {
+  display: flex;
+  text-align: left;
+  width: max-content;
+  position: absolute;
+  bottom: 0px;
+  right: 5px;
+  background-color: var(--textBackground);
+  color: var(--headerBlack);
+  display: flex;
+  font-size: 30px;
+}
+
+/*set 10% of the screen for the link destination headers*/
 .link-content {
   flex-basis: 10%;
   text-align: right;
   padding: 5px 25px 0 0;
   border-top: 20px;
-  /*font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;*/
   font-family: var(--sectionFamily);
   background-color: var(--documentColor);
   color: var(--sectionBackground);
 }
 
+/*set up the about section to use flex*/
 .content_detail {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   margin: 0;
   padding: 0;
-  /*font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;*/
 }
+
+/*set a border to divide the left and right side of the section,  The right side is 90% of the screen*/
 .content_detail .aside_right {
   display: flex;
   border-left: 3px solid var(--sectionBackground);
-
   margin: 5px 0 0 0;
-
   padding: 0 0 0 0;
   clear: both;
-
   flex-basis: 90%;
-
-  /*font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;*/
   background-color: var(--documentColor);
 }
+
+/*set the attrbutes for the About Me text*/
 .content_detail .aside_right p {
   padding-top: 5px;
   padding-left: 20px;
   padding-bottom: 20px;
 }
 
+/*set the dimensions for the project images and change the opacity on hover*/
+.work_detail img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.work_detail img:hover {
+  opacity: 0.3;
+}
+
+/*set work detail to use flex*/
 .work_detail {
   padding: 0 0 0 0;
   margin: 0;
@@ -165,21 +185,22 @@ section_subtitle {
   flex-wrap: wrap;
   width: 100%;
 }
+
 .work_detail .first_project {
   padding: 0 0 0 0;
   display: flex;
   border-left: 3px solid var(--sectionBackground);
   margin: 5px 0 0 0;
-  height: 200px;
-  width: 100%;
+  /*height: 200px;
+  width: 100%;*/
   position: relative;
   flex-flow: column wrap;
 
   clear: both;
 
-  background-image: url("../images/horiseon.jpg");
+  /*background-image: url("../images/horiseon.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center;*/
   justify-content: stretch;
   border-top: 2px solid var(--default);
   border-right: 2px solid var(--default);
@@ -201,16 +222,6 @@ section_subtitle {
 
   bottom: 10px;
   left: 0px;
-}
-
-.work_detail img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.work_detail img:hover {
-  opacity: 0.3;
 }
 
 .work_detail .second_project {
@@ -280,10 +291,11 @@ section_subtitle {
 
 .third_project figure h2 {
   position: absolute;
-
+  margin: 0;
+  padding: 0;
   background-color: var(--textBackground);
   color: var(--headerBlack);
-  display: block;
+  display: inline-table;
 
   bottom: 10px;
   left: 0px;
@@ -364,19 +376,16 @@ section_subtitle {
   bottom: 10px;
   left: 0px;
 }
+
 .project {
   margin: 0;
   padding: 0;
-  font-size: 30px;
+  font-size: 25px;
 }
 .detail {
   margin: 0;
   padding: 0;
-  font-size: 20px;
-}
-.detail::before {
-  content: "\00000A";
-  white-space: pre;
+  font-size: 15px;
 }
 
 .contact_detail {
@@ -481,6 +490,28 @@ section_subtitle {
   .work_detail .first_project {
     flex: 1 1 100%;
   }
+
+  h3 {
+    position: absolute;
+
+    background-color: var(--textBackground);
+    color: var(--headerBlack);
+    display: flex;
+
+    bottom: 3px;
+    left: 0px;
+  }
+  .project {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+  }
+  .detail {
+    margin: 0;
+    padding: 0;
+    font-size: 7px;
+  }
+ 
 }
 @media screen and (max-width: 285px) {
   /* stack the menu items and change the image size */
@@ -535,4 +566,15 @@ section_subtitle {
     background-color: var(--documentColor);
     color: var(--sectionBackground);
   }
+  .project {
+    .project {
+      margin: 0;
+      padding: 0;
+      font-size: 12px;
+    }
+    .detail {
+      margin: 0;
+      padding: 0;
+      font-size: 7px;
+    }
 }
