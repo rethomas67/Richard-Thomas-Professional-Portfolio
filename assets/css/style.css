@@ -186,106 +186,80 @@ h3 {
   width: 100%;
 }
 
+/*flex axis is column, position is relative for project and detail, first project image will span the next 90% of screen*/
 .work_detail .first_project {
   padding: 0 0 0 0;
   display: flex;
   border-left: 3px solid var(--sectionBackground);
   margin: 5px 0 0 0;
-  /*height: 200px;
-  width: 100%;*/
   position: relative;
   flex-flow: column wrap;
-
   clear: both;
-
-  /*background-image: url("../images/horiseon.jpg");
-  background-size: cover;
-  background-position: center;*/
   justify-content: stretch;
   border-top: 2px solid var(--default);
   border-right: 2px solid var(--default);
   border-bottom: 2px solid var(--default);
   gap: 20px;
-
   flex: 1 1 90%;
-
-  /*font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;*/
   background-color: var(--document);
 }
 
+/*position for the project and detail*/
 .first_project figure h2 {
   position: absolute;
-
   background-color: var(--textBackground);
   color: var(--headerBlack);
   display: block;
-
   bottom: 10px;
   left: 0px;
 }
 
+/*same setup as the first project container the remaining projects will be configured similarly
+  except the column is split 40% between two projects. Smaller screens will wrap the project images
+  use justify content to evenly space the elements*/
 .work_detail .second_project {
   padding: 0 0 0 0;
   margin: 5px 0 0 0;
   display: flex;
   border-left: 3px solid var(--sectionBackground);
   margin-right: 5px;
-  /*height: 200px;
-  width: 100%;*/
   position: relative;
   flex-flow: column wrap;
-
   clear: both;
-
-  /*background-image: url("../images/horiseon.jpg");
-  background-size: cover;
-  background-position: center;*/
   border-top: 2px solid var(--default);
   border-right: 2px solid var(--default);
   border-bottom: 2px solid var(--default);
   justify-content: space-between;
   gap: 20px;
   align-content: space-between;
-
   flex: 1 1 40%;
-
-  /*font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;*/
   background-color: var(--document);
 }
 
+/*same as project 1*/
 .second_project figure h2 {
   position: absolute;
-
   background-color: var(--textBackground);
   color: var(--headerBlack);
   display: block;
-
   bottom: 10px;
   left: 0px;
 }
 
+/*same as project 2*/
 .third_project {
   margin: 5px 40px 0 0;
   padding: 0 0 0 0;
   display: flex;
-
   margin-right: 0;
-  /*height: 200px;
-  width: 100%;*/
   position: relative;
   flex-flow: column wrap;
-
   clear: both;
-
-  /*background-image: url("../images/horiseon.jpg");
-  //background-size: cover;*/
   background-position: center;
   border: 2px solid var(--default);
-
   gap: 20px;
   flex: 1 1 40%;
   align-content: space-between;
-  /*font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;*/
   background-color: var(--document);
 }
 
@@ -301,82 +275,61 @@ h3 {
   left: 0px;
 }
 
+/*same as project 2*/
 .work_detail .fourth_project {
   padding: 0 0 0 0;
   margin: 5px 0 0 0;
   display: flex;
   border-left: 3px solid var(--sectionBackground);
   margin-right: 5px;
-  /* height: 200px;
-  width: 100%;*/
   position: relative;
   flex-flow: column wrap;
-
   clear: both;
-
-  /* background-image: url("../images/horiseon.jpg");
-  background-size: cover;
-  background-position: center;*/
   justify-content: space-between;
   border-top: 2px solid var(--default);
   border-right: 2px solid var(--default);
   border-bottom: 2px solid var(--default);
   gap: 20px;
   align-content: space-between;
-
   flex: 1 1 40%;
-
-  /*font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;*/
   background-color: var(--document);
 }
 
 .fourth_project figure h2 {
   position: absolute;
-
   background-color: var(--textBackground);
   color: var(--headerBlack);
   display: block;
-
   bottom: 10px;
   left: 0px;
 }
 
+/*same as project 2*/
 .fifth_project {
   margin: 5px 40px 0 0;
   padding: 0 0 0 0;
   display: flex;
-
   margin-right: 0;
-  /*height: 200px;
-  width: 100%;*/
   position: relative;
   flex-flow: column wrap;
-
   clear: both;
-
-  /*background-image: url("../images/horiseon.jpg");
-  background-size: cover;
-  background-position: center;*/
   border: 2px solid var(--default);
-
   gap: 20px;
   flex: 1 1 40%;
   align-content: space-between;
-  /*font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;*/
   background-color: var(--document);
 }
 
 .fifth_project figure h2 {
   position: absolute;
-
   background-color: var(--textBackground);
   color: var(--headerBlack);
   display: block;
-
   bottom: 10px;
   left: 0px;
 }
 
+/*font size for my projects and the detail*/
 .project {
   margin: 0;
   padding: 0;
@@ -394,29 +347,20 @@ h3 {
   width: 100%;
   margin: 0;
   padding: 0;
-
-  /*font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;*/
 }
 
-.contact_detail {
-  padding: 0 0 0 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
+/*set the axis to row to allow the contact elements to flow evenly across the screen*/
 .contact_detail .position {
   padding: 0 0 0 0;
   display: flex;
   border-left: 3px solid var(--sectionBackground);
   margin: 5px 0 0 0;
-
   flex-flow: row wrap;
   justify-content: space-evenly;
   flex: 1 1 90%;
 }
 
+/*Elements to be positioned across the screen*/
 .position .phone {
   height: 25px;
   margin: 5px 0 0 0;
@@ -477,30 +421,31 @@ h3 {
     width: 100%;
     padding: 0 20px;
   }
+  /*remove the flex-basis of 10% for smaller media*/
   .link-content {
     flex-basis: 0%;
     text-align: right;
     padding: 0;
     border-top: 20px;
-    /*font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;*/
     font-family: var(--sectionFamily);
     background-color: var(--documentColor);
     color: var(--sectionBackground);
   }
+  /*the image wraps and takes 100% width*/
   .work_detail .first_project {
     flex: 1 1 100%;
   }
 
+  /*change the spacing and font size for the project and detail elements*/
   h3 {
     position: absolute;
-
     background-color: var(--textBackground);
     color: var(--headerBlack);
     display: flex;
-
     bottom: 3px;
     left: 0px;
   }
+
   .project {
     margin: 0;
     padding: 0;
@@ -511,13 +456,13 @@ h3 {
     padding: 0;
     font-size: 7px;
   }
- 
 }
+
+/*similar for even smaller devices*/
 @media screen and (max-width: 285px) {
   /* stack the menu items and change the image size */
   header {
     display: flex;
-
     width: 100%;
     margin: 0;
   }
@@ -526,9 +471,7 @@ h3 {
   }
   header nav {
     width: 30%;
-
     flex-direction: column;
-
     padding: 0px 5px;
     background-color: var(--headerBlack);
     margin: 0;
@@ -561,20 +504,18 @@ h3 {
     text-align: right;
     padding: 0;
     border-top: 20px;
-    /*font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;*/
     font-family: var(--sectionFamily);
     background-color: var(--documentColor);
     color: var(--sectionBackground);
   }
   .project {
-    .project {
-      margin: 0;
-      padding: 0;
-      font-size: 12px;
-    }
-    .detail {
-      margin: 0;
-      padding: 0;
-      font-size: 7px;
-    }
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+  }
+  .detail {
+    margin: 0;
+    padding: 0;
+    font-size: 7px;
+  }
 }
